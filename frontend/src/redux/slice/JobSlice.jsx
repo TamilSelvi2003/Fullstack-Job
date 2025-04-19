@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async () => {
-  const response = await axios.get('http://localhost:5000/api/jobs');
+  const response = await axios.get('https://fullstack-job-backend.onrender.com/api/jobs');
   return response.data;
 });
 
