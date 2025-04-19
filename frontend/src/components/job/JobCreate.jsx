@@ -23,7 +23,7 @@ const CreateJob = ({ onClose, refreshJobs }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/jobs', formData);
+      await axios.post('https://fullstack-job-backend.onrender.com/api/jobs', formData);
       refreshJobs();
       // onClose();
     } catch (err) {
